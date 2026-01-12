@@ -1,0 +1,18 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+}
+
+nav a {
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, button {
+    margin-right: 10px;
+    padding: 5px;
+}
