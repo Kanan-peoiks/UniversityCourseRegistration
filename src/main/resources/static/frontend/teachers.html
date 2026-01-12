@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Teachers</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<h2>Teachers</h2>
+
+<form id="teacherForm">
+    <input type="text" id="firstName" placeholder="First name" required>
+    <input type="text" id="lastName" placeholder="Last name" required>
+    <input type="text" id="department" placeholder="Department">
+    <button type="submit">Add Teacher</button>
+</form>
+
+<ul id="teacherList"></ul>
+
+<script src="js/teachers.js"></script>
 </body>
 </html>

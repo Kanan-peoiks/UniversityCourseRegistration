@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Courses</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<h2>Courses</h2>
+
+<form id="courseForm">
+    <input type="text" id="name" placeholder="Course name" required>
+    <input type="number" id="credits" placeholder="Credits">
+    <button type="submit">Add Course</button>
+</form>
+
+<ul id="courseList"></ul>
+
+<script src="js/courses.js"></script>
 </body>
 </html>
