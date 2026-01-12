@@ -1,6 +1,7 @@
 package com.example.universitycourseregistration.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,5 +27,6 @@ public class Teacher {
     private String department;
 
     @OneToMany(mappedBy = "teacher")
+    @JsonIgnore
     private Set<Course> courses = new HashSet<>();
 }
