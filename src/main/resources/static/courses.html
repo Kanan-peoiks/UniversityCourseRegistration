@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurslar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Universitet Kurs Qeydiyyatı Sistemi</h1>
+    <nav>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="students.html">Tələbələr</a>
+        <a href="courses.html">Kurslar</a>
+        <a href="teachers.html">Müəllimlər</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Kurs Əlavə / Yenilə</h2>
+        <form id="courseForm">
+            <input type="hidden" id="courseId">
+            <input type="text" id="name" placeholder="Kurs adı" required>
+            <input type="number" id="credits" placeholder="Kreditlər" required>
+            <button type="submit">Saxla</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Kurs Siyahısı</h2>
+        <ul id="courseList"></ul>
+    </section>
+
+    <section>
+        <h2>Kursa Müəllim Təyin Et</h2>
+        <select id="courseSelectAssign"><option value="">Kurs seç</option></select>
+        <select id="teacherSelectAssign"><option value="">Müəllim seç</option></select>
+        <button onclick="assignTeacherToCourse()">Təyin Et</button>
+    </section>
+
+    <section>
+        <h2>Kurslar və Tədris Proqramları</h2>
+        <p>Bu bölmədə universitetdə tədris olunan bütün kurslar haqqında məlumat təqdim olunur. Burada:<br>
+            1. Kurs adı və kodu<br>
+            2. Kursun təsviri və kredit dəyəri<br>
+            3. Kursu tədris edən müəllim<br>
+            4. Qeydiyyatda olan tələbələrin sayı<br>
+            5. Kurslar tələbələrin akademik inkişafını təmin edən əsas komponentlərdir.</p>
+        <h2>Kurs Xalı Ver</h2>
+        <select id="courseSelectRate"><option value="">Kurs seç</option></select>
+        <input type="number" id="rating" min="0" max="5" step="0.5" placeholder="Xal (0-5)" required>
+        <button onclick="rateCourse()">Ver</button>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Spring Boot - Universiteti Layihəsi</p>
+</footer>
+
+<script src="js/courses.js"></script>
+</body>
+</html>

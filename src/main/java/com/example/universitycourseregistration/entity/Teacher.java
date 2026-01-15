@@ -27,6 +27,6 @@ public class Teacher {
     private String department;
 
     @OneToMany(mappedBy = "teacher")
-    @JsonIgnore
+    @JsonIgnore   // ✅ MÜTLƏQ
     private Set<Course> courses = new HashSet<>();
 }

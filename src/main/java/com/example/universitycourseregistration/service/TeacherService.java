@@ -27,4 +27,11 @@ public class TeacherService {
     public List<Teacher> findAll() {
         return teacherRepository.findAll();
     }
+
+    public void delete(Long id) {
+        Teacher teacher = findById(id)
+                .orElseThrow(() -> new RuntimeException("Müəllim tapılmadı"));
+        teacher.getCourses().forEach(course -> course.setTeacher(null));
+        teacherRepository.delete(teacher);
+    }
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tələbələr</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Universitet Kurs Qeydiyyatı Sistemi</h1>
+    <nav>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="students.html">Tələbələr</a>
+        <a href="courses.html">Kurslar</a>
+        <a href="teachers.html">Müəllimlər</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Tələbə İdarəetmə Bölməsi</h2>
+        <p>Bu bölmədə universitet tələbələrinin qeydiyyatı və məlumatlarının idarə olunması həyata keçirilir.  Burada siz:<br>
+            1. Yeni tələbə əlavə edə<br>
+            2. Mövcud tələbələrin siyahısına baxa<br>
+            3. Tələbələrin qeydiyyatdan keçdiyi kursları izləyə<br>
+            4. Lazımsız qeydləri silə bilərsiniz<br>
+            5. Tələbə məlumatlarının düzgün saxlanılması təhsil keyfiyyətinin artırılmasına xidmət edir.</p>
+        <h2>Tələbə Əlavə / Yenilə</h2>
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+            <input type="text" id="firstName" placeholder="Ad" required>
+            <input type="text" id="lastName" placeholder="Soyad" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Saxla</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Tələbə Siyahısı</h2>
+        <ul id="studentList"></ul>
+    </section>
+
+    <section>
+        <h2>Tələbəyə Kurs Əlavə Et / Sil</h2>
+        <select id="studentSelect"><option value="">Tələbə seç</option></select>
+        <select id="courseSelect"><option value="">Kurs seç</option></select>
+        <button onclick="addCourseToStudent()">Əlavə Et</button>
+        <button onclick="removeCourseFromStudent()">Sil</button>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Spring Boot - Universiteti Layihəsi</p>
+</footer>
+
+<script src="js/students.js"></script>
+</body>
+</html>

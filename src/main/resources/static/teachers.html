@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müəllimlər</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Universitet Kurs Qeydiyyatı Sistemi</h1>
+    <nav>
+        <a href="index.html">Ana Səhifə</a>
+        <a href="students.html">Tələbələr</a>
+        <a href="courses.html">Kurslar</a>
+        <a href="teachers.html">Müəllimlər</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Müəllimlər və Akademik Heyət</h2>
+        <p>Bu bölmə universitetin akademik heyəti haqqında məlumatların idarə edilməsi üçün nəzərdə tutulmuşdur. Funksiyalar:<br>
+            1. Müəllimlərin ad, ixtisas və əlaqə məlumatlarının saxlanılması<br>
+            2. Müəllimlərə təyin olunmuş kursların izlənməsi<br>
+            3. Akademik strukturun sistemli şəkildə idarə olunması<br>
+            4. Müəllimlərin düzgün idarə olunması tədris prosesinin əsas sütunlarından biridir.</p>
+        <h2>Müəllim Əlavə / Yenilə</h2>
+        <form id="teacherForm">
+            <input type="hidden" id="teacherId">
+            <input type="text" id="firstName" placeholder="Ad" required>
+            <input type="text" id="lastName" placeholder="Soyad" required>
+            <input type="text" id="department" placeholder="Departament" required>
+            <button type="submit">Saxla</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Müəllim Siyahısı</h2>
+        <ul id="teacherList"></ul>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Spring Boot - Universiteti Layihəsi</p>
+</footer>
+
+<script src="js/teachers.js"></script>
+</body>
+</html>

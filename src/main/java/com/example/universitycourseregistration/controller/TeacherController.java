@@ -33,4 +33,10 @@ public class TeacherController {
     public ResponseEntity<List<Teacher>> getAllTeachers() {
         return ResponseEntity.ok(teacherService.findAll());
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteTeacher(@PathVariable Long id) {
+        teacherService.delete(id);
+        return ResponseEntity.ok("Müəllim silindi");
+    }
 }
